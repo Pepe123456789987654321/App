@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="cyber-cyan">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Números Quiniela</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom keyframe animation for the number digits */
+    @keyframes pop-in {
+        0% { transform: translateY(20px) scale(0.9); opacity: 0; }
+        60% { transform: translateY(-5px) scale(1.05); opacity: 1; }
+        100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .animate-pop-in {
+      animation: pop-in 0.5s ease-out both;
+    }
+
+    /* --- THEME DEFINITIONS --- */
+    :root, html[data-theme='cyber-cyan'] {
+      --bg-primary: #0f172a; /* slate-900 */
+      --bg-secondary: #1e293b; /* slate-800 */
+      --bg-tertiary: #0f172a80; /* slate-900/50 */
+      --bg-interactive: #1e293b80; /* slate-800/50 */
+      --border-primary: #334155; /* slate-700 */
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8; /* slate-400 */
+      --text-placeholder: #475569; /* slate-600 */
+      --accent-primary: #06b6d4; /* cyan-500 */
+      --accent-secondary: #2563eb; /* blue-600 */
+      --accent-text: #67e8f9; /* cyan-300 */
+      --shadow-color: #06b6d433; /* cyan-500/20 */
+      --shadow-hover-color: #06b6d466; /* cyan-500/40 */
+      --ring-color: #67e8f9; /* cyan-300 */
+    }
+    html[data-theme='emerald-green'] {
+      --bg-primary: #052e16;
+      --bg-secondary: #064e3b;
+      --bg-tertiary: #052e1680;
+      --bg-interactive: #064e3b80;
+      --border-primary: #047857;
+      --text-primary: #ffffff;
+      --text-secondary: #a3a3a3;
+      --text-placeholder: #525252;
+      --accent-primary: #10b981; /* emerald-500 */
+      --accent-secondary: #34d399; /* emerald-400 */
+      --accent-text: #a7f3d0; /* emerald-200 */
+      --shadow-color: #10b98133;
+      --shadow-hover-color: #10b98166;
+      --ring-color: #6ee7b7;
+    }
+    html[data-theme='crimson-red'] {
+      --bg-primary: #4a0404;
+      --bg-secondary: #7f1d1d;
+      --bg-tertiary: #4a040480;
+      --bg-interactive: #7f1d1d80;
+      --border-primary: #991b1b;
+      --text-primary: #ffffff;
+      --text-secondary: #d4d4d4;
+      --text-placeholder: #737373;
+      --accent-primary: #ef4444; /* red-500 */
+      --accent-secondary: #f97316; /* orange-500 */
+      --accent-text: #fca5a5; /* red-300 */
+      --shadow-color: #ef444433;
+      --shadow-hover-color: #ef444466;
+      --ring-color: #fca5a5;
+    }
+    html[data-theme='amethyst-purple'] {
+      --bg-primary: #2e1065;
+      --bg-secondary: #581c87;
+      --bg-tertiary: #2e106580;
+      --bg-interactive: #581c8780;
+      --border-primary: #7e22ce;
+      --text-primary: #ffffff;
+      --text-secondary: #d8b4fe;
+      --text-placeholder: #a855f7;
+      --accent-primary: #a855f7; /* purple-500 */
+      --accent-secondary: #d946ef; /* fuchsia-500 */
+      --accent-text: #e9d5ff; /* purple-200 */
+      --shadow-color: #a855f733;
+      --shadow-hover-color: #a855f766;
+      --ring-color: #d8b4fe;
+    }
+    html[data-theme='classic-light'] {
+      --bg-primary: #f8fafc; /* slate-50 */
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #f1f5f9; /* slate-100 */
+      --bg-interactive: #ffffff80;
+      --border-primary: #e2e8f0; /* slate-200 */
+      --text-primary: #0f172a; /* slate-900 */
+      --text-secondary: #64748b; /* slate-500 */
+      --text-placeholder: #cbd5e1; /* slate-300 */
+      --accent-primary: #0ea5e9; /* sky-500 */
+      --accent-secondary: #38bdf8; /* sky-400 */
+      --accent-text: #0284c7; /* sky-600 */
+      --shadow-color: #0ea5e933;
+      --shadow-hover-color: #0ea5e966;
+      --ring-color: #7dd3fc;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-[var(--bg-primary)]">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
